@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./App.css"
 import Header from "../components/Header"
 import About from "../components/About"
@@ -13,10 +13,12 @@ const App = () => {
       <Header />
       <main>
         {/* routes here*/}
-        <Route path="/" exact component={Page1} />
-        <Route path="/about" exact component={About} />
-        <Route path="/getInTouch" exact component={GetInTouch} />
-        <Route path="/support" exact component={Support} />
+        <Switch>
+          <Route path="/" exact component={Page1} />
+          <Route path="/about" component={About} />
+          <Route path="/getInTouch" component={GetInTouch} />
+          <Route path="/support" component={Support} />
+        </Switch>
       </main>
     </Router>
   )
