@@ -9,8 +9,6 @@ The part if the URL means a placeholder which we're able to retrive using 'usePa
 export default function Topic() {
   const { topicId } = useParams()
 
-  console.log(topicId)
-
   return (
     <div>
       <h2>{topicId}</h2>

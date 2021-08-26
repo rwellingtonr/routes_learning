@@ -9,13 +9,12 @@ While the 'url' lets me make a relative link
 export default function Topics() {
   let { path, url } = useRouteMatch()
 
-  console.table([path, url])
   return (
     <div>
       <h1>Topics</h1>
       <ul>
         <li>
-          <Link to={`${url}/topicA`}>Topic A</Link>
+          <Link to={`${url}/TopicA`}>Topic A</Link>
         </li>
         <li>
           <Link to={`${url}/TopicB`}>Topic B</Link>
